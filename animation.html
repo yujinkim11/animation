@@ -5,8 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>animation</title>
+
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: lightskyblue;
+            animation-name: move;
+            /* => 애니메이션 이름 */
+
+            animation-duration: 2s;
+            /* => 애니메이션 지속 시간 */
+
+            /* animation-delay: 3s;
+            => 애니메이션 지연 시간 (3초 후에 움직이기 시작함) */
+
+            animation-iteration-count: 3;
+            /* => 반복횟수 */
+            /* => infinite : 무한으로 반복할 수 있음 */
+
+            animation-direction: normal;
+            /* => 애니메이션 방향
+            => alternate값을 제일 많이 사용함 */
+
+            animation-fill-mode: forwards;
+            /* => 애니메이션 마지막 위치에서 멈춤 */
+        }
+
+        @keyframes move {
+            0%{
+                transform: translate(0,0);                
+            }
+            50%{
+                transform: translate(200px, 200px) rotateZ(360deg);
+            }
+            100%{
+                transform: translate(400px,0);
+                background-color: darkslateblue;
+            }
+        }
+
+
+
+
+    </style>
+
+
 </head>
 <body>
     
+    <div class="box"></div>
+
 </body>
 </html>
